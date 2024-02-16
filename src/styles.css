@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: #eee;
+}
+
+.container {
+    width: max(500px, 40%);
+    background-color: #222;
+    padding: 1rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.controller {
+    margin: 0.5rem auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+}
+
+input, select {
+    height: 1.5rem;
+    padding: 4px;
+    outline: none;
+    border-radius: 4px;
+    background: hsl(197, 98%, 96%);
+    border: 1px solid lightgreen;
+    box-shadow: 0px 0px 2px lightgreen;
+}
+
+#locale {
+    font-size: 1.5rem;
+}
+
+.weather-cards {
+    display: grid;
+    grid-template-columns: 14rem;
+    grid-template-rows: 22rem 9.5rem;
+    gap: 2rem;
+    font-size: 0.9rem;
+}
+
+.weather-info span {
+    font-weight: bold;
+}
+
+.forecast {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 6.5rem 6.5rem;
+    justify-content: space-between;
+    font-size: 0.7rem;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-header {
+    width: 100%;
+    color: #efefef;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.2rem;
+    font-size: 1.25em;
+}
+
+.card-header > p:first-child {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#today > p:first-child {
+    font-size: 1.3rem;
+}
+
+.card-header > p:nth-child(2) {
+    font-size: 0.9em;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    width: 70%;
+    height: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.2em auto;
+}
+
+.icon-container.small {
+    height: 55%;
+}
+
+.icon-container > img {
+    width: 90%;
+    height: 80%;
+}
+
+.weather-info {
+    width: 95%;
+}
+
+.weather-info > p:first-child {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
