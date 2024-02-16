@@ -4,7 +4,6 @@ export default function getImg(condition, img) {
         return response.json();
     })
     .then(function(response) {
-        console.log(img);
         img.src = response.data.images.original.url;
     });
 }

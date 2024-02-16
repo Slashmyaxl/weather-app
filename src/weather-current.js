@@ -17,7 +17,6 @@ export default function localWeather(localeInput, format) {
         return response.json();
     })
     .then(function(response) {
-        console.log(response);
         locale.textContent = response.location.name;
         dateToday.textContent = response.current.last_updated;
         const conditionAdjective = response.current.condition.text;
