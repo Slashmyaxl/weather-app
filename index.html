@@ -1,0 +1,71 @@
+<!DOCtype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather around the Globe</title>
+    <script src="./main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather around the Globe</h1>
+        <section class="controller">
+            <input type="text" id="location" name="location" placeholder="Enter a city or zip code">
+            <select name="degrees" id="degrees">
+                <option value="fahrenheit">°F</option>
+                <option value="celcius">°C</option>
+            </select>
+            <button id="get-weather">Get Weather</button>
+        </section>
+        <h2 id="locale"></h2>
+        <section class="weather-cards">
+            <div class="card large">
+                <div class="card-header" id="today">
+                    <p>Today</p>
+                    <p class="date"></p>
+                </div>
+                <div class="icon-container large">
+                    <img src="" alt="" class="icon" id="icon-today">
+                    <p id="temp-today"></p>
+                </div>
+                <div class="weather-info">
+                    <p id="descriptor"></p>
+                    <p>Feels like: <span id="feels-like"></span></p>
+                    <p>Wind: <span id="wind"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>
+                    <p>Visibility: <span id="visibility"></span></p>
+                    <p>UV Index: <span id="uv"></span></p>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="card small">
+                    <div class="card-header" id="tomorrow">
+                        <p>Tomorrow</p>
+                        <p class="date"></p>
+                    </div>
+                    <div class="icon-container small">
+                        <img src="" alt="" id="icon-tomorrow">
+                        <p id="temp-tomorrow"></p>
+                    </div>
+                    <div class="weather-info">
+                        <p id="tomorrow-descriptor"></p>
+                    </div>
+                </div>
+                <div class="card small">
+                    <div class="card-header" id="after-tomorrow">
+                        <p></p>
+                        <p class="date"></p>
+                    </div>
+                    <div class="icon-container small">
+                        <img src="" alt="" id="icon-after-tomorrow">
+                        <p id="temp-after-tomorrow"></p>
+                    </div>
+                    <div class="weather-info">
+                        <p id="after-tomorrow-descriptor"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
