@@ -11,7 +11,7 @@
 }
 
 .container {
-    width: max(500px, 40%);
+    width: max(480px, 40%);
     background-color: hsl(197, 28%, 19%);
     padding: 1rem;
     min-height: 100vh;
@@ -40,13 +40,17 @@ input, select {
     box-shadow: 0px 0px 2px lightgreen;
 }
 
+h1 {
+    font-size: 1.8rem;
+}
+
 #locale {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .weather-cards {
     display: grid;
-    grid-template-columns: 14rem;
+    grid-template-columns: 15rem;
     grid-template-rows: 23rem 9.5rem;
     gap: 2rem;
     font-size: 0.9rem;
@@ -59,7 +63,7 @@ input, select {
 .forecast {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: 6.5rem 6.5rem;
+    grid-template-columns: 7rem 7rem;
     grid-template-rows: 9.5rem;
     justify-content: space-between;
     font-size: 0.7rem;
@@ -69,9 +73,19 @@ input, select {
     border: 2px solid #eee;
     border-radius: 6px;
     background: #444;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.card.large {
+    grid-template-columns: 100%;
+    grid-template-rows: 14% 50% 36%;
+}
+
+.card.small {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 40% 35%;
 }
 
 .card-header {
@@ -103,10 +117,11 @@ input, select {
     border-radius: 3px;
     background: #111;
     width: 70%;
-    height: 50%;
+    height: 97%;
     font-size: 1.5em;
     font-weight: bold;
     margin: 0.1em auto;
+    align-self: center;
 }
 
 .icon-container > img {
